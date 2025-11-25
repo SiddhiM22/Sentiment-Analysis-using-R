@@ -7,13 +7,13 @@ library("wordcloud")
 library("ggplot2")
 
 ## Twitter authentication
-api_key <- "KhiW2nBG93UcYnCnST0j3a3hR"
+api_key <- ""
 
-api_secret <- "1jl5erRp4Y3mEJBxnEN4MgWQdKrVUuXaP46NBZTYQqu8zPWyvJ"
+api_secret <- ""
 
-access_token <- "930825606929018880-FAMz9vvuMsYd05f7t3CaqH3rwhLCwYd"
+access_token <- ""
 
-access_token_secret <- "QygMColsj0WooQJsMdrDByOfOXZljq9zX5gtSnKeo6j4q"
+access_token_secret <- ""
 
 setup_twitter_oauth(api_key,api_secret,access_token,access_token_secret)
 
@@ -182,3 +182,4 @@ rownames(Sentimentscores_tech)<-NULL
 ggplot(data=Sentimentscores_tech,aes(x=sentiment,y=Score))+geom_bar(aes(fill=sentiment),stat = "identity")+
   theme(legend.position="none")+
   xlab("Sentiments")+ylab("scores")+ggtitle("Sentiments of people behind the tweets on tech as a whole")
+
